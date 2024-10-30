@@ -1,0 +1,14 @@
+data-sources:
+  sources:
+    - name: data-base-1
+      strategy: postgres
+      url: jdbc://.....
+      table: users
+      user: testuser
+      password: testpass
+    - name: data-base-2
+      strategy: mysql
+      url: jdbc://.....
+      table: user_table
+      user: testuser
+      password: testpass

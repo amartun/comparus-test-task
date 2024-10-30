@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.comparus.test.task.controller.dto.UserDto;
 
-public interface UserService {
+public interface UserAggregationService {
 
     List<UserDto> getUsers();
 

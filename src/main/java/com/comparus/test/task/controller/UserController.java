@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.comparus.test.task.controller.api.UserApi;
 import com.comparus.test.task.controller.dto.UserDto;
+import com.comparus.test.task.service.UserAggregationService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,12 +21,13 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class UserController implements UserApi {
 
+    private final UserAggregationService userAggregationService;
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     @Override
     public List<UserDto> getUsers() {
-        return List.of();
+        return userAggregationService.getUsers();
     }
 
 
